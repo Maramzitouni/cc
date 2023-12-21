@@ -14,4 +14,17 @@ public class YamsTest {
     public void squareShouldReturn35(){
         assertEquals(yams.game(List.of(1, 1, 3, 1, 1)),35);
     }
+
+
+    @org.junit.Test
+    public void fullShouldReturn30(){
+        assertEquals(yams.game(List.of(1, 3, 3, 1, 1)),30);
+    }
+
+    @org.junit.Test
+    public void yamsShouldReturn50(){
+        assertEquals(yams.game(List.of(1, 1, 1, 1, 1)),50);
+    }
+
+
 }
