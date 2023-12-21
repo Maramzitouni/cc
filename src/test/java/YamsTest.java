@@ -37,4 +37,14 @@ public class YamsTest {
         assertEquals(yams.games(List.of(1, 4, 2,3, 5),List.of(1, 4, 2,3, 5)),30);
     }
 
+    @org.junit.Test
+    public void ShouldReturn100(){
+        assertEquals(yams.games(List.of(1, 1, 1,1, 1),List.of(1, 1, 1,1, 1)),100);
+    }
+
+    @org.junit.Test
+    public void ShouldReturn130(){
+        assertEquals(yams.games(List.of(1, 4, 2,3, 5),List.of(1, 1, 1,1, 1)),65);
+    }
+
 }

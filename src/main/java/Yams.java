@@ -1,3 +1,4 @@
+import java.util.Collections;
 import java.util.List;
 
 public class Yams {
@@ -5,7 +6,6 @@ public class Yams {
     public int oneGame(List<Integer> rolls) {
         boolean hasThree = false;
         boolean hasTwo = false;
-
         for (int roll : rolls) {
             int count = countOccurrences(rolls, roll);
             if (count == 5) {
