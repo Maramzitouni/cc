@@ -2,7 +2,7 @@ import java.util.List;
 
 public class Yams {
 
-    public int game(List<Integer> rolls) {
+    public int oneGame(List<Integer> rolls) {
         boolean hasThree = false;
         boolean hasTwo = false;
 
@@ -44,5 +44,12 @@ public class Yams {
         return sum;
     }
 
+    public int games(List<Integer>... lists) {
+        int score=0;
+        for (List<Integer> list : lists) {
+          score +=  oneGame(list);
+        }
+        return score;
+    }
 
 }
