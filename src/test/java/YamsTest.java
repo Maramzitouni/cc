@@ -27,4 +27,9 @@ public class YamsTest {
     }
 
 
+    @org.junit.Test
+    public void chanceShouldReturn(){
+        assertEquals(yams.game(List.of(1, 4, 2,3, 5)),15);
+    }
+
 }

@@ -2,21 +2,15 @@ import java.util.List;
 
 public class Yams {
 
-    public int game(List<Integer> spears) {
+    public int game(List<Integer> rolls) {
         boolean hasThree = false;
         boolean hasTwo = false;
 
-        for (int i = 0; i < spears.size(); i++) {
-            int count = 0;
-            for (Integer spear : spears) {
-                if (spears.get(i).equals(spear)) {
-                    count++;
-                }
-            }
-            if(count == 5){
+        for (int roll : rolls) {
+            int count = countOccurrences(rolls, roll);
+            if (count == 5) {
                 return 50;
-            }
-            if (count == 4) {
+            } else if (count == 4) {
                 return 35;
             } else if (count == 3) {
                 hasThree = true;
@@ -28,8 +22,22 @@ public class Yams {
             return 30;
         } else if (hasThree) {
             return 28;
+        } else {
+            int sum = 0;
+            for (int roll : rolls) {
+                sum += roll;
+            }
+            return sum;
         }
-        return 0;
+    }
+    private int countOccurrences(List<Integer> rolls, int number) {
+        int count = 0;
+        for (int roll : rolls) {
+            if (roll == number) {
+                count++;
+            }
+        }
+        return count;
     }
 
 }
