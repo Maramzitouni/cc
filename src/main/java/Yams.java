@@ -10,9 +10,12 @@ public class Yams {
                     count++;
                 }
             }
-            if (count == 3) {
+            if (count == 4){
+                return 35;
+            }else if (count == 3) {
                 return 28;
             }
+
         }
         return 0;
 
