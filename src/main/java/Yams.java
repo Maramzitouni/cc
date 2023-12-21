@@ -23,11 +23,7 @@ public class Yams {
         } else if (hasThree) {
             return 28;
         } else {
-            int sum = 0;
-            for (int roll : rolls) {
-                sum += roll;
-            }
-            return sum;
+        return sumOfRolls(rolls);
         }
     }
     private int countOccurrences(List<Integer> rolls, int number) {
@@ -39,5 +35,14 @@ public class Yams {
         }
         return count;
     }
+
+    private int sumOfRolls(List<Integer> rolls) {
+        int sum = 0;
+        for (int roll : rolls) {
+            sum += roll;
+        }
+        return sum;
+    }
+
 
 }
