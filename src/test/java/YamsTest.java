@@ -1,10 +1,12 @@
+import java.util.List;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 public class YamsTest {
     Yams yams = new Yams();
     @org.junit.Test
-    public void shouldReturn0(){
-       assertEquals(yams.game(),0);
+    public void brelanShouldReturn28(){
+       assertEquals(yams.game(List.of(1, 2, 3, 1, 1)),28);
     }
 }
